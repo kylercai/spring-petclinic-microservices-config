@@ -90,4 +90,9 @@ spring:
           property-sources:
             - name: key-vault-property-source-1
               endpoint: https://kilaueakv.vault.azure.net/
-              credential.managed-identity-enabled: true    
+              credential.managed-identity-enabled: true   
+  jms:
+    servicebus:
+      connection-string: ${spring.jms.servicebus.connection-string}
+      idle-timeout: 60000
+      pricing-tier: premium               
